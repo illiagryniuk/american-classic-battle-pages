@@ -4,6 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Support - Padel tournament counter</title>
+  <meta name="application-name" content="Padel tournament counter">
+  <meta name="apple-mobile-web-app-title" content="Padel tournament counter">
+  <meta property="og:title" content="Padel tournament counter Support">
+  <meta property="og:image" content="../assets/app-icon.png">
+  <link rel="icon" type="image/png" href="../assets/app-icon.png">
+  <link rel="apple-touch-icon" href="../assets/app-icon.png">
   <style>
     :root {
       color-scheme: light dark;
@@ -49,6 +55,25 @@
     ul { padding-left: 22px; }
     a { color: var(--blue); font-weight: 700; }
     .updated { margin: 0 0 28px; color: var(--muted); }
+    .page-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .page-header h1 {
+      margin-bottom: 8px;
+    }
+    .page-header .updated {
+      margin-bottom: 0;
+    }
+    .app-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      box-shadow: 0 10px 24px rgba(10, 132, 255, 0.2);
+      flex: none;
+    }
     .button {
       display: inline-block;
       background: var(--blue);
@@ -66,12 +91,22 @@
       color: #14634e;
       font-weight: 700;
     }
+    @media (max-width: 520px) {
+      .page-header {
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
 <body>
   <main>
-    <h1>Support</h1>
-    <p class="updated">Padel tournament counter<br>Last updated: June 8, 2026</p>
+    <header class="page-header">
+      <img class="app-icon" src="../assets/app-icon.png" width="64" height="64" alt="Padel tournament counter app icon">
+      <div>
+        <h1>Support</h1>
+        <p class="updated">Padel tournament counter<br>Last updated: June 8, 2026</p>
+      </div>
+    </header>
 
     <p class="note">
       Padel tournament counter is an offline padel tournament organizer for
